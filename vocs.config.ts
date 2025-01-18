@@ -1,7 +1,7 @@
 import { defineConfig } from 'vocs'
 
 export default defineConfig({
-  title: 'Docs',
+  title: 'Interstate Docs',
   sidebar: [
     {
       text: 'Validator Quickstart',
