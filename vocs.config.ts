@@ -30,7 +30,7 @@ export default defineConfig({
       items: [
         {
           text: 'API Specification',
-          link: '/api-specification',
+          link: '/user/api-specification',
         },
       ]
     }
