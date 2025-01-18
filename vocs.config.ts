@@ -6,7 +6,11 @@ export default defineConfig({
     {
       icon: 'github',
       link: 'https://github.com/interstate-labs'
-    }
+    },
+    {
+      icon: 'telegram',
+      link: 'https://t.me/+-i4dP7U2BggxMzAx'
+    },
   ],
   sidebar: [
     {
