@@ -15,20 +15,23 @@ git clone --recursive https://github.com/eth-educators/eth-docker
     2. Select "Ethereum Node" for the next step.
     3. Select "Geth" and "lighthouse"
     4. Select other settings
-
+```
 #### Make Interstate Specific Changes To Validator Startup
 nano .env
+```
 # Update "EL_EXTRAS" and "CL_EXTRAS" with the following values
 # CL_EXTRAS="--builder=http://mev-sidecar-api:9062 --builder-fallback-disable-checks"
 # VC_EXTRAS="--builder-proposals --prefer-builder-proposals"
-
+```
 #### Start The Validator
+```
 ./ethd up
 go install github.com/protolambda/eth2-val-tools@latest
 go install github.com/wealdtech/ethereal/v2@latest
 eth2-val-tools mnemonic
 ```
-- update the secrets.env file
+
+Update the secrets.env file
   - Decide on how many deposits you would like to perform. Generally this would be (amount of testnet ether you possess)/32. Set the `ACC_START_INDEX` and `ACC_END_INDEX` in   **secrets.env** accordingly.
 
 #### Register validators
