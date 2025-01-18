@@ -2,6 +2,12 @@ import { defineConfig } from 'vocs'
 
 export default defineConfig({
   title: 'Interstate Docs',
+  socials: [
+    {
+      icon: 'github',
+      link: 'https://github.com/interstate-labs/preconf-router'
+    }
+  ],
   sidebar: [
     {
       text: 'Intro',
