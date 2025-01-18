@@ -26,8 +26,14 @@ export default defineConfig({
       ]
     },
     {
-      text: 'API Specification',
-      link: '/api-specification',
-    },
+      text: 'For Users',
+      item: [
+        {
+          text: 'API Specification',
+          link: '/api-specification',
+        },
+      ]
+    }
+  
   ],
 })
