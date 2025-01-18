@@ -11,8 +11,8 @@ export default defineConfig({
       text: 'For Validators',
       items: [
         {
-          text: 'Overview',
-          link: '/validator/overview',
+          text: 'Benefits and Risks',
+          link: '/validator/benefits-and-risks',
         },
 
         {
