@@ -29,12 +29,12 @@ export default defineConfig({
       text: 'For Users',
       items: [
         {
-          text: 'API Specification',
-          link: '/user/api-specification',
-        },
-        {
           text: 'Quickstart',
           link: '/user/quickstart',
+        },
+        {
+          text: 'API Specification',
+          link: '/user/api-specification',
         },
       ]
     }
