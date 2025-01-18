@@ -4,8 +4,8 @@ export default defineConfig({
   title: 'Docs',
   sidebar: [
     {
-      text: 'Getting Started',
-      link: '/getting-started',
+      text: 'Validator Quickstart',
+      link: '/validator-quickstart',
     },
     {
       text: 'Example',
