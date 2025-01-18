@@ -4,9 +4,7 @@
 ## Spin up EL/CL/VL nodes with eth-docker on holesky
 
 - Clone our validator quickstart repo: https://github.com/interstate-labs/validator-quickstart-dev/tree/main
-
-### Spin up nodes with eth-docker
-You can spin up EL/CL/VC nodes with [eth-docker](https://github.com/eth-educators/eth-docker).
+- You can spin up EL/CL/VC nodes with [eth-docker](https://github.com/eth-educators/eth-docker).
 
 #### Clone the eth-docker repo
 ```bash
@@ -23,7 +21,8 @@ nano .env
 # Update "EL_EXTRAS" and "CL_EXTRAS" with the following values
 # CL_EXTRAS="--builder=http://mev-sidecar-api:9062 --builder-fallback-disable-checks"
 # VC_EXTRAS="--builder-proposals --prefer-builder-proposals"
-#### Start The 
+
+#### Start The Validator
 ./ethd up
 go install github.com/protolambda/eth2-val-tools@latest
 go install github.com/wealdtech/ethereal/v2@latest
