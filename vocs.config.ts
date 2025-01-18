@@ -25,11 +25,6 @@ export default defineConfig({
         }
       ]
     },
-
-    {
-      text: 'Validator Quickstart',
-      link: '/validator-quickstart',
-    },
     {
       text: 'API Specification',
       link: '/api-specification',
