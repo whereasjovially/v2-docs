@@ -64,4 +64,11 @@ I understand these dire warnings and wish to proceed with key import (No/yes)
 3. Run the interstate-sidecar and commit-boost: ```docker compose up```
 
 
+## Verify Setup 
+```
+npm install preconf-cli
+npm preconf-cli healthcheck-sidecar
+```
+This will check the sidecar, commit-boost instance, and relay to see your setup was run correctly.
+
 Congrats, You're finished with the setup! 
