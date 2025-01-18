@@ -1,6 +1,9 @@
 # Intro
 
-Interstate currently does two things
+Interstate currently does:
+- Inclusion Preconfirmations
+- Execution Preconfirmations
+- Other Proposer Commitments
 
 ## Inclusion Preconfirmation
 
@@ -10,7 +13,9 @@ Blocks can be bought 1 - ~32 slots in advance (the rough size of the ethereum pr
 
 Pricing: The preconfirmation buyer can expect to pay 1-10% in addition gas fees to buy a preconfirmation.
 
-Inclusion preconfirmations give a weaker guarantee than execution preconfirmations in that the transaction may revert if 
+Inclusion preconfirmations give a weaker guarantee than execution preconfirmations in that the transaction may revert if the gas limit of the block is exceeded, or if there is a revert on the transction. 
+
+So if you buy an inclusion preconfirmation, your transaction will be included in the block but may revert. Execution preconfirmations are guaranteed to not revert.
 
 ## Execution Preconfirmation (coming soon)
 
@@ -18,6 +23,6 @@ An execution preconfirmation is guaranteed to be included in the upcoming block 
 
 This gives the preconfirmation buyer the guarantee that their transaction will not revert.
 
-## Generic Proposer Commitments (coming soon)
+## Other Proposer Commitments (coming soon)
 
 These allow the proposer to commit to generic attestations.
