@@ -17,11 +17,12 @@ git clone --recursive https://github.com/eth-educators/eth-docker
     4. Select other settings
 ```
 #### Make Interstate Specific Changes To Validator Startup
-nano .env
+
 ```
+nano .env
 # Update "EL_EXTRAS" and "CL_EXTRAS" with the following values
-# CL_EXTRAS="--builder=http://mev-sidecar-api:9062 --builder-fallback-disable-checks"
-# VC_EXTRAS="--builder-proposals --prefer-builder-proposals"
+CL_EXTRAS="--builder=http://mev-sidecar-api:9062 --builder-fallback-disable-checks"
+VC_EXTRAS="--builder-proposals --prefer-builder-proposals"
 ```
 #### Start The Validator
 ```
