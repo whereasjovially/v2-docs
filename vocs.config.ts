@@ -11,5 +11,9 @@ export default defineConfig({
       text: 'API Specification',
       link: '/api-specification',
     },
+    {
+      text: 'Intro',
+      link: '/intro',
+    },
   ],
 })
