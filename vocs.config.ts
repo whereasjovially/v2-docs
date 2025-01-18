@@ -5,7 +5,7 @@ export default defineConfig({
   socials: [
     {
       icon: 'github',
-      link: 'https://github.com/interstate-labs/preconf-router'
+      link: 'https://github.com/interstate-labs'
     }
   ],
   sidebar: [
