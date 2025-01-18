@@ -6,7 +6,7 @@
 - Clone our validator quickstart repo: https://github.com/interstate-labs/validator-quickstart-dev/tree/main
 - You can spin up EL/CL/VC nodes with [eth-docker](https://github.com/eth-educators/eth-docker).
 
-#### Clone the eth-docker repo
+## Clone the eth-docker repo
 ```bash
 git clone --recursive https://github.com/eth-educators/eth-docker
 ./ethd install
@@ -16,7 +16,7 @@ git clone --recursive https://github.com/eth-educators/eth-docker
     3. Select "Geth" and "lighthouse"
     4. Select other settings
 ```
-#### Make Interstate Specific Changes To Validator Startup
+## Make Interstate Specific Changes To Validator Startup
 
 ```
 nano .env
@@ -24,7 +24,7 @@ nano .env
 CL_EXTRAS="--builder=http://mev-sidecar-api:9062 --builder-fallback-disable-checks"
 VC_EXTRAS="--builder-proposals --prefer-builder-proposals"
 ```
-#### Start The Validator
+## Start The Validator
 ```
 ./ethd up
 go install github.com/protolambda/eth2-val-tools@latest
@@ -35,7 +35,7 @@ eth2-val-tools mnemonic
 Update the secrets.env file
   - Decide on how many deposits you would like to perform. Generally this would be (amount of testnet ether you possess)/32. Set the `ACC_START_INDEX` and `ACC_END_INDEX` in   **secrets.env** accordingly.
 
-#### Register validators
+## Register validators
 ```
 ./build_deposits.sh
 ./exec_deposits.sh
