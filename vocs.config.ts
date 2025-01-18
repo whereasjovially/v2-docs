@@ -11,16 +11,17 @@ export default defineConfig({
       text: 'For Validators',
       items: [
         {
+          text: 'Overview',
+          link: '/validator/overview',
+        },
+
+        {
           text: 'Quickstart',
           link: '/validator/quickstart',
         },
         {
-          text: 'Advanced Configuration',
-          link: '/validator/advanced',
-        },
-        {
-          text: 'Verify ',
-          link: '/validator/troubleshooting',
+          text: 'Verify Setup',
+          link: '/validator/verify',
         }
       ]
     },
