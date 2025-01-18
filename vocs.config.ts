@@ -32,6 +32,10 @@ export default defineConfig({
           text: 'API Specification',
           link: '/user/api-specification',
         },
+        {
+          text: 'Quickstart',
+          link: '/user/quickstart',
+        },
       ]
     }
   ],
