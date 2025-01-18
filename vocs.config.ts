@@ -8,8 +8,8 @@ export default defineConfig({
       link: '/validator-quickstart',
     },
     {
-      text: 'Example',
-      link: '/example',
+      text: 'API Specification',
+      link: '/api-specification',
     },
   ],
 })
