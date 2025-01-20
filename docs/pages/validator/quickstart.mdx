@@ -36,13 +36,6 @@ eth2-val-tools mnemonic
 ## Update the secrets.env file
   - Decide on how many deposits you would like to perform. Generally this would be (amount of testnet ether you possess)/32. Set the `ACC_START_INDEX` and `ACC_END_INDEX` in   **secrets.env** accordingly.
 
-## Update Beacon URL
-update cb-config.toml with your beacon url, line 14: https://github.com/interstate-labs/validator-quickstart/blob/main/holesky/cb-config.toml#L14
-```
-vi cb-config.toml
-// update beacon url line
-```
-
 ## Register validators
 ```
 ./build_deposits.sh
@@ -67,9 +60,23 @@ I understand these dire warnings and wish to proceed with key import (No/yes)
 
 ## Start The Sidecar 
 
-1. Update `cb-config.toml` file (for commit-boost)
-2. Update `.config` file (for interstate-sidecar)
-3. Run the interstate-sidecar and commit-boost: ```docker compose up```
+## Update `cb-config.toml` file (for commit-boost)
+  - update cb-config.toml with your beacon url, line 14: https://github.com/interstate-labs/validator-quickstart/blob/main/holesky/cb-config.toml#L14
+```
+  vi cb-config.toml
+  // update beacon url line
+```
+
+## Update `.config` file for interstate-sidecar
+update these lines
+```
+BEACON_API_URL=http://cl-1-lighthouse-geth:4000
+EXECUTION_API_URL=http://el-1-geth-lighthouse:8545
+ENGINE_API_URL=http://el-1-geth-lighthouse:8551
+```
+
+## Run the interstate-sidecar and commit-boost
+```docker compose up```
 
 
 ## Verify Setup 
