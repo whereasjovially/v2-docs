@@ -36,6 +36,13 @@ eth2-val-tools mnemonic
 ## Update the secrets.env file
   - Decide on how many deposits you would like to perform. Generally this would be (amount of testnet ether you possess)/32. Set the `ACC_START_INDEX` and `ACC_END_INDEX` in   **secrets.env** accordingly.
 
+## Update Beacon URL
+update cb-config.toml with your beacon url, line 14: https://github.com/interstate-labs/validator-quickstart/blob/main/holesky/cb-config.toml#L14
+```
+vi cb-config.toml
+// update beacon url line
+```
+
 ## Register validators
 ```
 ./build_deposits.sh
