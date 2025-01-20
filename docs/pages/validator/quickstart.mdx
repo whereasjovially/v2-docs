@@ -3,9 +3,6 @@
 
 ## Spin up EL/CL/VL nodes with eth-docker on holesky
 
-```
-git clone --recursive https://github.com/interstate-labs/validator-quickstart
-```
 
 ## Clone the eth-docker repo
 ```bash
@@ -59,6 +56,11 @@ I understand these dire warnings and wish to proceed with key import (No/yes)
 ```
 
 ## Start The Sidecar 
+
+```
+git clone --recursive https://github.com/interstate-labs/validator-quickstart
+cd validator-quickstart/holesky
+```
 
 ## Update `cb-config.toml` file (for commit-boost)
   - update cb-config.toml with your beacon url, line 14: https://github.com/interstate-labs/validator-quickstart/blob/main/holesky/cb-config.toml#L14
