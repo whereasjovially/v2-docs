@@ -33,10 +33,19 @@ eth2-val-tools mnemonic
 ## Update the secrets.env file
   - Decide on how many deposits you would like to perform. Generally this would be (amount of testnet ether you possess)/32. Set the `ACC_START_INDEX` and `ACC_END_INDEX` in   **secrets.env** accordingly.
 
+## Clone Validator Quickstart Repo
+
+```
+git clone --recursive https://github.com/interstate-labs/validator-quickstart
+cd validator-quickstart/holesky
+```
+
+
 ## Register validators
 ```
 ./build_deposits.sh
 ./exec_deposits.sh
+// update the fields beow according to your information. The acc_start_index is typically 0, and the acc_end_index corresponds to the number of validators you want to start. It is typically 1 for starting 1 validator.
 eth2-val-tools keystores --source-mnemonic "$VALIDATORS_MNEMONIC" --insecure --source-min $ACC_START_INDEX --source-max $ACC_END_INDEX
 ```
 
@@ -53,13 +62,6 @@ you WILL get slashed. If it has been less than 15 minutes since you deleted them
 you are at risk of getting slashed. Exercise caution
 
 I understand these dire warnings and wish to proceed with key import (No/yes)
-```
-
-## Start The Sidecar 
-
-```
-git clone --recursive https://github.com/interstate-labs/validator-quickstart
-cd validator-quickstart/holesky
 ```
 
 ## Update `cb-config.toml` file (for commit-boost)
