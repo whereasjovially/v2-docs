@@ -15,14 +15,6 @@ git clone --recursive https://github.com/eth-educators/eth-docker
     4. Select other settings
     5. Press yes for all settings, input your public key for the rewards wallet address
 ```
-## Make Interstate Specific Changes To Validator Startup
-
-```
-vi .env
-# Update "EL_EXTRAS" and "CL_EXTRAS" with the following values
-CL_EXTRAS="--builder=http://mev-sidecar-api:9062 --builder-fallback-disable-checks"
-VC_EXTRAS="--builder-proposals --prefer-builder-proposals"
-```
 ## Start The Validator
 ```
 ./ethd up
