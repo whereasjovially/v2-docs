@@ -9,12 +9,9 @@
 ### Run validator & sidecar
 ```
 git clone --branch fix/set-builderapi --single-branch https://github.com/interstate-labs/eth-docker.git
-cd eth-docker
+cd eth-docker/interstate
 // update the values in the interstate/secrets.env
-cd interstate
-./generator.sh // this generates the keystores and deposits to become a validator
-cp -r ./validators_generator/assigned_data/{keys,secrets} ./.eth/validator_keys
-./ethd up
+./quickstart.sh // this generates the keystores and deposits to become a validator
 ./ethd keys import
 ```
 
