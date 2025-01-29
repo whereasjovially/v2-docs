@@ -8,21 +8,12 @@
     - ```sudo apt install jq```
 
 
-### Running validators and sidecar
+### Running validator & sidecar
 ```
 git clone --branch fix/set-builderapi --single-branch https://github.com/interstate-labs/eth-docker.git
 cd eth-docker
-```
-
-update the values in the validator_setup/secrets.env file
-
-Generate keystores and deposit eth to become validators by running:
-```
-.validator_setup/generator.sh
-```
-
-Run validator node:
-```
+// update the values in the interstate/secrets.env
+./validator_setup/generator.sh // this generates the keystores and deposits to become a validator
 cp -r ./validators_generator/assigned_data/{keys,secrets} ./.eth/validator_keys
 ./ethd up
 ./ethd keys import
