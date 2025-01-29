@@ -1,32 +1,24 @@
 # Validator Quickstart
 
-## Install the environment
+### Install Golang & Docker
+- Install docker by following: https://docs.vultr.com/how-to-install-docker-on-ubuntu-24-04
 
-### Install Docker
-You can follow this document: https://docs.vultr.com/how-to-install-docker-on-ubuntu-24-04
-
-### Install go
-You can follow this document: https://wiki.crowncloud.net/?How_To_Install_Go_on_Ubuntu_24_04
-
-### Install others
-go install github.com/protolambda/eth2-val-tools@latest
-go install github.com/wealdtech/ethereal/v2@latest
+- Install Go by following: https://wiki.crowncloud.net/?How_To_Install_Go_on_Ubuntu_24_04
 
 ### Running validators and sidecar
-Clone the repo:
 ```
 git clone --branch fix/set-builderapi --single-branch https://github.com/interstate-labs/eth-docker.git
 cd eth-docker
 ```
 
-Set the secrets.env file
+update the values in the validator_setup/secrets.env file
 
-Generate keystores and deposit eth to become validators
+Generate keystores and deposit eth to become validators by running:
 ```
 ./generator.sh
 ```
 
-Run validator node
+Run validator node:
 ```
 cp -r ./validators_generator/assigned_data/{keys,secrets} ./.eth/validator_keys
 ./ethd up
