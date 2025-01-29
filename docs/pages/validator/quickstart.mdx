@@ -1,9 +1,36 @@
 # Validator Quickstart
 
-To get started quickly
+## Install the environment
+
+### Install Docker
+You can follow this document: https://docs.vultr.com/how-to-install-docker-on-ubuntu-24-04
+
+### Install go
+You can follow this document: https://wiki.crowncloud.net/?How_To_Install_Go_on_Ubuntu_24_04
+
+### Install others
+go install github.com/protolambda/eth2-val-tools@latest
+go install github.com/wealdtech/ethereal/v2@latest
+
+### Running validators and sidecar
+Clone the repo:
 ```
-https://github.com/interstate-labs/eth-docker
+git clone --branch fix/set-builderapi --single-branch https://github.com/interstate-labs/eth-docker.git
+cd eth-docker
+```
+
+Set the secrets.env file
+
+Generate keystores and deposit eth to become validators
+```
+./generator.sh
+```
+
+Run validator node
+```
+cp -r ./validators_generator/assigned_data/{keys,secrets} ./.eth/validator_keys
 ./ethd up
+./ethd keys import
 ```
 
 And you're running the interstate-sidecar and an ethereum validator on testnet!
