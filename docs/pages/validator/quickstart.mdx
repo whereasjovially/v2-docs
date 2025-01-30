@@ -13,7 +13,7 @@ git clone --branch fix/set-builderapi --single-branch https://github.com/interst
 cd eth-docker/interstate
 // update the values in the interstate/secrets.env
 ./quickstart.sh // this generates the keystores and deposits to become a validator
-./ethd keys import
+cd .. && ./ethd keys import
 ```
 
 And you're running the interstate-sidecar and an ethereum validator on testnet!
