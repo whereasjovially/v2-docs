@@ -34,8 +34,11 @@ ETH1_FROM_PRIV=
 
 ### Run the setup
 ```
-./quickstart.sh // this generates the keystores and deposits to become a validator
-cd .. && ./ethd keys import
+./quickstart.sh // this generates the keystores, deposits to become a validator, runs valdiator nodes and sidecar.
 ```
 
+### Register validator keys to valdiator nodes (After you check whether beacon node is fully synced)
+```
+cd .. && ./ethd keys import
+```
 And you're running the interstate-sidecar and an ethereum validator on testnet!
