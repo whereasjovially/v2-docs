@@ -1,7 +1,13 @@
 # Validator Quickstart
 
-## Install the environment
+### Install Dependencies
+- Install docker by following: https://docs.vultr.com/how-to-install-docker-on-ubuntu-24-04
+- Install Go by following: https://wiki.crowncloud.net/?How_To_Install_Go_on_Ubuntu_24_04
+- Install JQ by following: https://jqlang.github.io/jq/
+    - ```sudo apt install jq```
+- Install eth2-val-tools: https://github.com/protolambda/eth2-val-tools
 
+<<<<<<< HEAD
 ### Install Docker
 You can follow this document: https://docs.vultr.com/how-to-install-docker-on-ubuntu-24-04
 
@@ -16,23 +22,34 @@ go install github.com/wealdtech/ethereal/v2@latest
 
 ### Running validators and sidecar
 Clone the repo:
+=======
+### Clone the repo
+>>>>>>> 942308f2ed623c100addff6e7e706cc4d7a20809
 ```
 git clone --branch fix/set-builderapi --single-branch https://github.com/interstate-labs/eth-docker.git
-cd eth-docker
+cd eth-docker/interstate
 ```
 
-Set the secrets.env file
+### Update the secrets.env file
 
-Generate keystores and deposit eth to become validators
+Warning ensure the below fields are unique every time this setup is run. Signing up for two validators with the same private keys will cause a double attestation which will result in a slash of 1 eth and exit.
+
 ```
-./generator.sh
+// Set different values for each of these, use `eth2-val-tools mnemonic` command to generate mnemonic
+VALIDATORS_MNEMONIC=
+WITHDRAWALS_MNEMONIC=
+
+// Set private and public keys which store eth. 
+# Public address of wallet which holds testETH
+ETH1_FROM_ADDR=
+# Private key of the wallet which holds testETH
+ETH1_FROM_PRIV=
 ```
 
-Run validator node
+### Run the setup
 ```
-cp -r ./validators_generator/assigned_data/{keys,secrets} ./.eth/validator_keys
-./ethd up
-./ethd keys import
+./quickstart.sh // this generates the keystores and deposits to become a validator
+cd .. && ./ethd keys import
 ```
 
 And you're running the interstate-sidecar and an ethereum validator on testnet!
