@@ -41,4 +41,11 @@ ETH1_FROM_PRIV=
 ```
 cd .. && ./ethd keys import
 ```
+
+### After validators are activated, you can set withdrawal addresses (You don't have to remove assigned_data folder).
+```
+./set_withdrawal_address.sh
+```
+After running this line, you can see the broadcast message in `./staking_deposit-cli-948d3fc-linux-amd64/bls_to_execution_changes/`
+Broadcast that message in https://holesky.beaconcha.in/tools/broadcast to set withdrawal addresses.
 And you're running the interstate-sidecar and an ethereum validator on testnet!
