@@ -37,6 +37,11 @@ export default defineConfig({
           text: 'Long Form Setup',
           link: '/validator/long-form-setup',
         },
+                {
+          text: 'Helm Charts & Kubernetes',
+          link: '/validator/helm-charts',
+        },
+
       ]
     },
     {
