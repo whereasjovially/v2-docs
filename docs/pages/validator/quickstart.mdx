@@ -16,6 +16,18 @@ git clone https://github.com/interstate-labs/eth-docker.git
 cd eth-docker/interstate
 ```
 
+### Set the web3Signer server url 
+```
+In .config file (/eth-docker/interstate/.config)
+WEB3SIGNER_URL=
+```
+
+### Set the TLS config  
+```
+In tls folder (/eth-docker/interstate/tls)
+create combined.pem and web3signer.crt file to be used to connect to the web3Signer server.
+```
+
 ### Update the secrets.env file
 
 Warning ensure the below fields are unique every time this setup is run. Signing up for two validators with the same private keys will cause a double attestation which will result in a slash of 1 eth and exit.
